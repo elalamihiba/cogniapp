@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+<title>About</title>
+<script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!--	<link rel="stylesheet" href="../jquery.mobile-1.1.1/jquery.mobile-1.1.1.min.css" />
+	<script src="../jquery.mobile-1.1.0/jquery-1.7.1.min.js"></script>
+	<script src="../jquery.mobile-1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	-->
+	<script type="text/javascript" language="javascript">
+	function showValue(){
+	document.getElementById("mission").style.display="none";
+	document.getElementById("valeur").style.display="block";
+	}
+	function showMission(){
+	document.getElementById("mission").style.display="block";
+	document.getElementById("valeur").style.display="none";
+	}
+
+	
+	</script>
+</head> 
+<body> 
+
+<div id="about" data-role="page">
+
+	<div data-role="header" data-theme="a" data-position="fixed">
+	<a href="index.html" data-icon="back" data-theme="b"  >Back</a>
+		<h1>About</h1>
+		<a href="index.html" data-icon="home" data-theme="b" >Home</a>
+	</div><!-- /header -->
+	
+<div data-role="navbar" >
+	<ul>
+		<li><a href="#" class="ui-btn-active ui-state-persistent" onclick="showMission()">Mission</a></li>
+		<li><a id="val" href="#"  onclick="showValue()">Valeur</a></li>
+	</ul>
+</div><!-- /navbar -->
+	
+	<div id="mission" data-role="content">	
+     <p> La mission de Cognicap est d'etre un pont entre les entreprises et les compétences. En partant du constat que les sociétés ont un besoin croissant en ressources qualifiées pour une affectation immédiate, et que les ressources ont des profils structurés et fort, mais souvent n'ont pas une compétence particulère qui leurs manquent pour rejoindre un projet; nous nous engageons et forger des compéstences en phase avec le besoin des entreprises, et à compléter ce gap! 
+
+Le site Cognicap est entièrement développés en Java et hébergé chez Heberjahiz sur serveur Tomcat 5! Avec une base de données MySql. 
+
+Nous utilisons dans nos atliers les outils JetBrains pour le développement </p>
+		
+	</div><!-- /content -->
+	
+	<div id="valeur" style="display:none">	
+     <p>   <ul> <li>Intégrité : Nous ne jurons que par les règles de l'art!!</li> 
+      <li>Excellence : Pas de compromis!</li> 
+       <li> Cohérence : N'est-ce pas logique? </li>
+         <li> Innovation : C'est simple, il suffit de ne pas copier!</li> 
+            <li> Créativité : Imaginer, Construire!</li> </ul>
+			</p>
+		
+	</div>
+	
+	<div data-role="footer" data-position="fixed"> 
+	<center>
+    <p> &copy Copyright 2012 Cognicap. Tous droits réservés. </p>
+	</center>
+</div> 
+
+
+</div><!-- /page -->
+
+</body>
+</html>
