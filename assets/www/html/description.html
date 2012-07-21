@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title id="titre"></title>
+<script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="../../jquery.mobile-1.1.1/jquery.mobile-1.1.1.min.css" />
+	<script src="../../jquery.mobile-1.1.1/jquery-1.7.1.min.js"></script>
+	<script src="../../jquery.mobile-1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" language="javascript">
+	</script>
+	
+</head> 
+<body> 
+
+<div id="about" data-role="page">
+
+<script>
+$.getJSON("../json/test.json",
+  {
+  },
+  function(data){	
+   var string=
+   '<div data-role="content" id="desc" class="description"> <p>  '+data.cours[id_cours-1].description+'</p></div> '+
+   '<div style="display:none" id="form" class="description"> <p>'+data.cours[id_cours-1].formateur+'</p></div> '+
+   '<div style="display:none" id="dure" class="description"> <p>'+   data.cours[id_cours-1].duree+'</p></div> '+
+   '<div style="display:none" id="nive" class="description"> <p>'   +data.cours[id_cours-1].niveau+'</p></div>';
+      $(string).appendTo("#contenu");
+	 
+
+ 
+	}
+   );
+   
+   function showDiv(para){
+$(".description").hide();
+$("#"+para).show();
+	//document.getElementById(para).style.display="block";
+	}
+   
+	
+	  </script>
+	<div data-role="header" data-theme="a" data-position="fixed">
+	<a href="cours.html" data-icon="back" data-theme="b" data-transition="none" >Back</a>
+		<h1>About</h1>
+		<a href="../index.html" data-icon="home" data-theme="b" data-transition="none">Home</a>
+	</div><!-- /header -->
+	
+<div data-role="navbar" >
+	<ul>       
+		<li><a href="#" class="ui-btn-active ui-state-persistent" onclick="showDiv('desc')">Description</a></li>
+		<li><a id="val" href="#"  onclick="showDiv('form')">Formateur</a></li>
+		<li><a id="val" href="#"  onclick="showDiv('dure')">Durée</a></li>
+		<li><a id="val" href="#"  onclick="showDiv('nive')">Niveau</a></li>
+		
+		
+	</ul>
+</div><!-- /navbar -->
+	<div id="contenu" data-role="content"> </div>
+	
+	
+
+	
+	
+
+
+</div><!-- /page -->
+
+</body>
+</html>

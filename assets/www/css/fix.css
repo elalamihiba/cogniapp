@@ -1,0 +1,23 @@
+
+
+.ui-mobile, .ui-mobile .ui-page, .ui-mobile [data-role="page"], .ui-mobile [data-role="dialog"], .ui-page, .ui-mobile .ui-page-active {
+
+-webkit-backface-visibility: hidden;
+}
+
+/* to align fields and labels in the contact me dialog box*/
+
+#contactme label{
+width:30%;
+}
+
+#contactme input{
+width:70%;
+}
+#contactme label , #contactme input{
+display:inline-block;
+}
+
+
+
+/* end */

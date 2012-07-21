@@ -1,0 +1,100 @@
+
+
+
+
+<html>
+<head>
+<title>Mission</title>
+<script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript" language="javascript">
+	function showValue(){
+	document.getElementById("mission").style.display="none";
+	document.getElementById("valeur").style.display="block";
+	}
+	function showMission(){
+	document.getElementById("mission").style.display="block";
+	document.getElementById("valeur").style.display="none";
+	}
+
+
+
+
+	</script>
+</head> 
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header" data-theme="a" data-position="fixed">
+	
+		<h1>About B</h1>
+<a href="index.html" data-icon="back"  >Back</a>
+		<a href="index.html" data-icon="home"  >Home</a>
+	</div><!-- /header -->
+
+
+
+<div data-role="navbar" >
+	<ul>
+		<li><a href="#" class="ui-btn-active ui-state-persist" onclick="showMission()">Mission</a></li>
+		<li><a href="#" onclick="showValue()">Valeur</a></li>
+	</ul>
+</div><!-- /navbar -->
+	
+	<div id="mission" data-role="content">	
+     <p>C La mission de Cognicap est d'etre un pont entre les entreprises et les compétences. En partant du constat que les sociétés ont un besoin croissant en ressources qualifiées pour une affectation immédiate, et que les ressources ont des profils structurés et fort, mais souvent n'ont pas une compétence particulère qui leurs manquent pour rejoindre un projet; nous nous engageons et forger des compéstences en phase avec le besoin des entreprises, et à compléter ce gap! 
+
+Le site Cognicap est entièrement développés en Java et hébergé chez Heberjahiz sur serveur Tomcat 5! Avec une base de données MySql. 
+
+Nous utilisons dans nos atliers les outils JetBrains pour le développement </p>
+		
+	</div><!-- /content -->
+	
+	<div id="valeur" style="display:none">	
+     <p>   - Intégrité : Nous ne jurons que par les règles de l'art!! 
+      - Excellence : Pas de compromis! 
+         - Cohérence : N'est-ce pas logique? 
+            - Innovation : C'est simple, il suffit de ne pas copier! 
+               - Créativité : Imaginer, Construire! </p>
+</ul>		
+
+
+
+	</div>
+	
+	<div data-role="footer"> 
+	<h4>Footer content</h4> 
+
+
+
+
+
+
+
+
+
+</div> 
+
+</div><!-- /page -->
+
+
+
+
+
+</body>
+</html>

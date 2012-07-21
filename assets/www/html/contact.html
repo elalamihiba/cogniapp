@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Cordova</title>
+<script type="text/javascript" charset="utf-8" src="../lib/cordova/cordova-1.8.1.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/> 
+	<link rel="stylesheet" href="../lib/jquery.mobile/jquery.mobile-1.1.1.min.css" /> 
+	<script src="../lib/jquery/jquery-1.7.1.min.js"></script>
+	<script src="../lib/jquery.mobile/jquery.mobile-1.1.1.min.js"></script>  
+	<link rel="stylesheet" href="../lib/jquery.mobile/jquery.mobile.simpledialog.min.css" /> 
+<script src="../lib/jquery.mobile/jquery.mobile.simpledialog2.min.js"></script> 
+<link rel="stylesheet" href="../css/fix.css" />
+</head> 
+<body> 
+
+
+<div id="contact" data-role="page" >
+<script> $(document).delegate('#opendialog', 'click', function() {
+  // NOTE: The selector can be whatever you like, so long as it is an HTML element.
+  //       If you prefer, it can be a member of the current page, or an anonymous div
+  //       like shown.
+  $('<div />').simpledialog2({ 
+    mode: 'blank',
+    headerText: 'On vous appelle ',
+    headerClose: true,
+	dialogAllow: true,
+    dialogForce: true,
+    blankContent : 
+	'<div id="contactme">'+
+	'<div data-role="fieldcontain" id="contactme">'+
+    '<label for="name">Nom:</label>'+
+    '<input type="text" name="name" id="nom" value=""  />'+
+'</div>'+'<div data-role="fieldcontain">'+	
+
+	'<label for="name">Prenom:</label>'+ 
+	'<input type="text" name="name" id="prenom" value="" />'+
+	'</div>'+'<div data-role="fieldcontain">'+	
+	'<label for="name">Tel:</label>'+ 
+	'<input type="text" name="name" id="tel" value="" />'+
+	'</div>'+'<div data-role="fieldcontain">'+	
+	'<label for="name">Email:</label>'+ 
+	'<input type="text" name="name" id="tel" value="" />'+
+	'</div>'+
+	'</div>'+
+	"<a rel='close' data-role='button' href='#'>Valider</a>" 
+  })
+}) 
+</script>
+
+	<div data-role="header"	data-position="fixed">
+	<a href="../index.html" data-icon="back" data-theme="b"  data-rel="back" data-transition="none" >Back</a>
+		<h1>Contact</h1>
+		<a href="#" id="log" data-theme="b" data-transition="none" >log in</a>
+	</div><!-- /header -->
+
+	
+	<div data-role="content">
+	<img src="../img/map.png" onclick="window.location='location.html'" WIDTH="100%" HEIGHT="30%"  alt="Map" />
+	<a href="" onclick="window.location='location.html'" data-role="button" data-icon="home" data-transition="none">Via adresse</a>
+	<a href="http://www.facebook.com/formations" data-role="button" data-icon="person" data-transition="none">Via facebook</a>
+	<a href="https://twitter.com/cognicap" data-role="button" data-icon="person" data-transition="none">Via twitter</a>	
+	<a href="tel:0661287001" data-role="button" data-icon="grid" data-transition="none" >Appelez-nous</a>
+	<a href="#" id="opendialog" data-role="button" data-icon="grid"  data-transition="none" >On vous appelle?</a>
+	<a href="mailto:nmoursli@cognicap.com" data-role="button" data-icon="mail" data-transition="none">Via Email</a>
+	
+
+		
+	</div><!-- /content -->
+	
+	
+
+
+</div><!-- /page -->
+
+</body>
+</html>

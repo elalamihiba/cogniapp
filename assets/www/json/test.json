@@ -1,0 +1,30 @@
+﻿ {"cours":[
+		{    "id":1,
+			"nom": "java",
+			"description": "Le langage Java est un langage de programmation informatique orienté objet créé par James Gosling et Patrick Naughton, employés de Sun Microsystems, avec le soutien de Bill Joy (cofondateur de Sun Microsystems en 1982), présenté officiellement le 23 mai 1995 au SunWorld.",
+			"formateur":"Nabil Moursili",
+			"format":"8h par sem",
+			"duree":"8 semaines",
+			"niveau":"débutant",
+			"img":"java"
+		},
+		{
+		    "id":2,
+			"nom": "UML",
+			"description": "UML est un sigle informatique pouvant désigner :Unified Modeling Language, un langage graphique de modélisation des données et des traitements ;User Mode Linux, un noyau Linux compilé qui peut être exécuté dans l'espace utilisateur.",
+			"formateur":"Nabil Moursili",
+			"format":"8h par jour",
+			"duree":"5 jours",
+			"niveau":"experimenté",
+			"img":"uml"
+		},
+		{
+		"id":3,
+		"nom":"Android",
+		"description":"Android est un système d'exploitation open source3 utilisant le noyau Linux, pour smartphones, tablettes tactiles, PDA et terminaux mobiles conçu par Android, une startup rachetée par Google, et annoncé officiellement le 5 novembre 20074. D'autres types d'appareils possédant ce système d'exploitation existent, par exemple des téléviseurs et des tablettes.",
+		"formateur":"Nabil Moursili",
+		"format":"6 par sem",
+		"duree":"6 semaines",
+		"niveau":"experimenté",
+		"img":"android"}
+	]}

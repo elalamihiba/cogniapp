@@ -1,14 +1,20 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Cordova</title>
-<script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/> 
-<link rel="stylesheet" href="../jquery.mobile-1.1.1/jquery.mobile-1.1.1.css" />
+<title>CogniApp</title>
 
-<!--  <link rel="stylesheet" href="fix.css" />   -->
-<script src="jquery.js"></script>
-	<script src="../jquery.mobile-1.1.1/jquery.mobile-1.1.1.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="lib/jquery.mobile/jquery.mobile-1.1.1.min.css" />
+	
+	<script type="text/javascript" charset="utf-8" src="lib/cordova/cordova-1.8.1.js"></script>
+	<script src="lib/jquery/jquery-1.7.1.min.js"></script>
+	<script src="lib/jquery.mobile/jquery.mobile-1.1.1.min.js"></script>
+ 	<link rel="stylesheet" href="lib/jquery.mobile/jquery.mobile.simpledialog.min.css" /> 
+<script src="lib/jquery.mobile/jquery.mobile.simpledialog2.min.js"></script> 
+<link rel="stylesheet" href="css/fix.css" />
+
+	
 	<script type="text/javascript" language="javascript">
 	function showValue(){
 	document.getElementById("mission").style.display="none";
@@ -18,31 +24,62 @@
 	document.getElementById("mission").style.display="block";
 	document.getElementById("valeur").style.display="none";
 	}
+ 
+
   
 	</script> 
+	<script> $(document).delegate('#log', 'click', function() {
+  // NOTE: The selector can be whatever you like, so long as it is an HTML element.
+  //       If you prefer, it can be a member of the current page, or an anonymous div
+  //       like shown.
+  $('<div />').simpledialog2({ 
+    mode: 'blank',
+    headerText: 'Log in ',
+    headerClose: true,
+	dialogAllow: true,
+    dialogForce: true,
+    blankContent : 
+	'<div id="contactme">'+
+	'<div data-role="fieldcontain" >'+
+    '<label for="name">Nom:</label>'+
+    '<input type="text" name="name" id="nom" value=""  />'+
+'</div>'+'<div data-role="fieldcontain">'+	
+	'<label for="name">Mot de passe:</label>'+ 
+	'<input type="text" name="name" id="prenom" value="" />'+
+	'</div>'+
+	'</div>'+
+	"<a rel='close' data-role='button' href='#'>Valider</a>"+
+	"<a href='register.html' > S'inscrire </a>"
+  })
+}) 
+</script>
+
+
 	
 </head> 
-<body> 
+<body > 
 
-<div id="index" data-role="page">
+<div id="index" data-role="page" 		>
 
 	<div data-role="header" data-position="fixed">
 		<h1>Cognicap</h1>
+	<a href="#" id="log" data-theme="b" data-transition="none" class="ui-btn-right">log in</a>
 	</div><!-- /header -->
 
 	
-	<div data-role="content">	
+	<div data-role="content" >	
+		
 		<ul data-role="listview" data-inset="true" data-theme="d"> 
-	<li><a href="about.html" >About</a></li>
-	<li><a href="cours.html" >Cours</a></li>
-	<li><a href="contact.html" >Contact</a></li>
+	<li><a href="html/about.html" data-transition="none">About</a></li>
+	<li><a href="html/cours.html" data-transition="none">Cours</a></li>
+	<li><a href="html/contact.html" data-transition="none">Contact</a></li>
 </ul>		
 	</div><!-- /content -->
 	
-	<div data-role="footer" data-position="fixed"> 
+	<div data-role="footer" data-position="fixed" > 
 	<center>
 	<p>44 rue Aguelmane Sidi Ali Apt 14, Agdal, Rabat</p> 
-    <p>	&copy Copyright 2012 Cognicap. Tous droits reservés. </p>
+    <p>	&copy Copyright 2012 Cognicap. Tous droits reservÃ©s. </p>
 	</center>
 </div> 
 

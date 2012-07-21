@@ -1,0 +1,59 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Cordova</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="../lib/jquery.mobile/jquery.mobile-1.1.1.min.css" />
+	<script type="text/javascript" charset="utf-8" src="../lib/cordova/cordova-1.8.1.js"></script>
+	<script src="../lib/jquery/jquery-1.7.1.min.js"></script>
+	<script src="../lib/jquery.mobile/jquery.mobile-1.1.1.min.js"></script>
+</head> 
+<body > 
+
+  
+ <div  data-role="page">
+ <script>
+ var id_cours;
+ var tst;
+ $(document).ready(function (){
+$.getJSON("../json/test.json",
+  {
+  contentType: "application/json; charset=utf-8"
+	
+  },
+  function(data){	
+  tst=data;
+  var string='<li><a href="about.html" data-transition="slide">About</a></li>';
+  $.each(data.cours, function(i,cour){
+   var string='<li><a href="description.html" data-transition="none" onclick="id_cours=\''+cour.id+'\'"><img src="../img/'+cour.img+'.png" height="80" width="80" alt="'+cour.img+'"/><h1>'+cour.nom+'</h1><p>Cours avancé necessitant des compétences préliminaires</p></a></li>';
+    
+      $("#liste").append(string);
+    });
+$("#liste").listview("refresh");
+	}
+   );
+   })
+  
+
+   </script>
+
+<div data-role="header"	data-position="fixed">
+	<a href="index.html" data-icon="back" data-theme="b"  data-rel="back" data-transition="none">Back</a>
+		<h1>Cours</h1>
+	<a href="#" id="log" data-theme="b" data-transition="none" >log in</a>	
+	</div><!-- /header -->
+
+	
+	<div data-role="content">	
+		<ul data-role="listview" id="liste" data-inset="true" data-theme="d" data-filter="true"> 
+	
+		
+</ul>		
+	</div><!-- /content -->
+	
+
+
+</div><!-- /page -->
+
+</body>
+</html>
